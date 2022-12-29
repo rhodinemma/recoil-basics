@@ -11,9 +11,14 @@ function App() {
     <>
       <CreateTodo />
 
-      {todoList.map((todoItem) => (
-        <ViewTodo key={todoItem.id} item={todoItem} />
-      ))}
+      <div className="container mx-auto">
+        <h2 className="text-2xl font-bold py-4 text-center justify-center">
+          Available Items
+        </h2>
+        {todoList.map((todoItem) => (
+          <ViewTodo key={todoItem.id} item={todoItem} />
+        ))}
+      </div>
     </>
   );
 }
